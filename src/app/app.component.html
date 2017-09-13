@@ -1,3 +1,26 @@
-<h1>
-  {{title}}
-</h1>
+<div class="container well">
+	<div class="row">
+			<h1 class='text-center'>Weather Angular App</h1>			
+	</div>
+</div>
+<div class="container">
+	<div class="row">
+		<form class='col-md-4 col-md-offset-4'>
+			<div class='form-group'>
+				<label for="city">Enter your city:</label>
+				<input name="city" #city placeholder="City">
+				<button (click)=search(city.value) class='btn btn-primary'>Get</button>		
+			</div>
+		</form>
+	</div>
+</div>
+<div class="container">
+	<div class="row">
+		<div *ngIf='data' class='text-center well'>
+			<h1>{{data.display_location.city}}</h1>
+			<p>Elv: {{data.display_location.elevation}} m, {{data.display_location.latitude.slice(0, 5)}} &#x00B0;N, {{data.display_location.longitude.slice(0, 5)}} &#x00B0;E</p>
+			<p>{{data.display_location.country}}</p>
+			<p>{{data.temp_c}} &#x2103;</p>
+		</div>		
+	</div>
+</div>
