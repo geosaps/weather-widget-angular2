@@ -1,26 +1,81 @@
-<div class="container well">
-	<div class="row">
-			<h1 class='text-center'>Weather Angular App</h1>			
-	</div>
+<div class="background-image" [ngStyle]="{'background-image': 'url(' + image + ')'}">
 </div>
-<div class="container">
-	<div class="row">
-		<form class='col-md-4 col-md-offset-4'>
-			<div class='form-group'>
-				<label for="city">Enter your city:</label>
-				<input name="city" #city placeholder="City">
-				<button (click)=search(city.value) class='btn btn-primary'>Get</button>		
-			</div>
-		</form>
-	</div>
-</div>
-<div class="container">
-	<div class="row">
-		<div *ngIf='data' class='text-center well'>
-			<h1>{{data.display_location.city}}</h1>
-			<p>Elv: {{data.display_location.elevation}} m, {{data.display_location.latitude.slice(0, 5)}} &#x00B0;N, {{data.display_location.longitude.slice(0, 5)}} &#x00B0;E</p>
-			<p>{{data.display_location.country}}</p>
-			<p>{{data.temp_c}} &#x2103;</p>
-		</div>		
-	</div>
-</div>
+  <div class="container">
+  	<div class="row">
+  			<h1 class='text-center title'>Ivano-Frankivs'k Weather Widget</h1>			
+  	</div>
+  </div>
+  <div class="container">
+  	<div class="row">
+      <div class="col-md-2 col-sm-2"></div>
+      <div class="col-md-8 col-sm-8 weather-cont"> 
+        <img class="background" [src]="image">
+        <h1 class="temperature">{{data.temp_c}} &#x2103;</h1>
+        <div class="parameters"> 
+          <p class="humidity">
+            <img class="par-ico" [src]="humidityIco">
+            {{data.relative_humidity}}</p>
+          <p class="pressure">
+            <img class="par-ico" [src]="pressureIco">
+            {{data.pressure_mb}} hPa</p>
+          <p class="wind">
+            <img class="par-ico" [src]="windIco">
+            {{data.wind_kph}} kph</p>
+        </div>
+        <div *ngIf='data' class='text-center weather-info'>
+          <img class="condition" [src]="icon">
+          <h2>{{data.weather}}</h2>
+          <hr>
+          <ul> 
+            <li><p class="weather-time">{{hourly[0].FCTTIME.hour + ":" + hourly[0].FCTTIME.min}}</p>
+                <p class="weather-temp">{{hourly[0].temp.metric}} &#x2103;</p> 
+            </li>
+            <li><p class="weather-time">{{hourly[3].FCTTIME.hour + ":" + hourly[3].FCTTIME.min}}</p>
+                <p class="weather-temp">{{hourly[3].temp.metric}} &#x2103;</p> 
+            </li>
+            <li><p class="weather-time">{{hourly[6].FCTTIME.hour + ":" + hourly[6].FCTTIME.min}}</p>
+                <p class="weather-temp">{{hourly[6].temp.metric}} &#x2103;</p> 
+            </li>
+            <li><p class="weather-time">{{hourly[9].FCTTIME.hour + ":" + hourly[9].FCTTIME.min}}</p>
+                <p class="weather-temp">{{hourly[9].temp.metric}} &#x2103;</p> 
+            </li>
+          </ul>
+        </div>
+        <div class="forecast">
+          <ul>
+            <li> 
+            <p class="forecast-day">{{days[0].date.weekday}}</p>
+            <img class="forecast-condition" [src]="icon1">
+            <p class="forecast-temp">{{days[0].high.celsius}} &#x2103;</p>
+            </li>
+            <li> 
+            <p class="forecast-day">{{days[1].date.weekday}}</p>
+            <img class="forecast-condition" [src]="icon2">
+            <p class="forecast-temp">{{days[1].high.celsius}} &#x2103;</p>
+            </li>
+            <li> 
+            <p class="forecast-day">{{days[2].date.weekday}}</p>
+            <img class="forecast-condition" [src]="icon3">
+            <p class="forecast-temp">{{days[2].high.celsius}} &#x2103;</p>
+            </li>
+            <li> 
+            <p class="forecast-day">{{days[3].date.weekday}}</p>
+            <img class="forecast-condition" [src]="icon4">
+            <p class="forecast-temp">{{days[3].high.celsius}} &#x2103;</p>
+            </li>
+            <li> 
+            <p class="forecast-day">{{days[4].date.weekday}}</p>
+            <img class="forecast-condition" [src]="icon5">
+            <p class="forecast-temp">{{days[4].high.celsius}} &#x2103;</p>
+            </li>
+          </ul>
+        </div>
+        <div class="time"> 
+          <h4>Last update:</h4>
+          <h3>{{data.observation_time_rfc822.slice(17, 25)}}</h3>
+          <h5>{{data.observation_time_rfc822.slice(5, 16)}}</h5>
+        </div>
+      </div>
+      <div class="col-md-2 col-sm-2"></div>
+  	</div>
+  </div>

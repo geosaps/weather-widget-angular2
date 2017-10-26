@@ -1,0 +1,152 @@
+.title {
+  text-shadow: .15em .15em .35em #000;
+}
+
+.weather-cont {
+  font-family: 'Libre Baskerville', serif;
+  margin-top: 20px;
+  padding: 0;
+  height: 500px;
+}
+.weather-cont:hover {
+  cursor: default;
+}
+
+.background {
+  width: 70%;
+  height: 70%;
+}
+.parameters {
+  position: absolute;
+  bottom: 32%;
+  left: 20px;
+  text-shadow: .20em .20em .45em #000;
+}
+.par-ico {
+  width: 20px;
+  margin-right: 10px;
+  -webkit-filter: drop-shadow(5px 5px 5px #111);
+  filter: drop-shadow(5px 5px 5px #111); 
+}
+.temperature {
+  color: white;
+  font-size: 6.0em;
+  position: absolute;
+  margin: 0;
+  bottom: 32%;
+  right: 32%;
+  text-shadow: .20em .20em .45em #000;
+}
+
+/* -------------RIGHT CONDITION--------------*/
+
+
+.weather-info {
+  background-color: rgba(32,32,32,0.7);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 30%;
+}
+.weather-info:hover {
+  cursor: default;
+}
+.weather-info hr {
+  width: 80%;
+  border-color: #AAA;
+}
+.weather-info h2 {
+  margin: 0;
+  margin-top: 120px;
+  font-size: 1.8em;
+  font-weight: bold;
+  color: #AAA;
+}
+.condition {
+  -webkit-filter: drop-shadow(5px 5px 5px #111);
+    filter: drop-shadow(5px 5px 5px #111);
+    width: 40%;
+    margin-top: 40px;
+    padding: 0;
+    position: absolute;
+    right: 70px;
+}
+.weather-info ul {
+  padding-left: 0;
+}
+.weather-info ul li {
+  border-bottom: 1px solid #AAA;
+  display: flex;
+  justify-content: space-between;
+  margin: 20px auto;
+  width: 80%;
+}
+.weather-info ul li p {
+  margin-bottom: 0;
+}
+.weather-time {
+  color: #AAA;
+}
+
+
+
+/* -------------BOTTOM FORECAST--------------*/
+.forecast {
+  background-color: rgba(32,32,32,0.7);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 30%;
+}
+.forecast ul {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  width: 70%;
+}
+.forecast ul li:hover {
+  background-color: rgba(32,32,32,0.8);
+  cursor: default;
+}
+.forecast ul li {
+  padding-top: 20px;
+  width: 110px;
+  position: relative;
+}
+.forecast-day {
+  color: #AAA;
+  margin: 0;
+}
+.forecast-condition {
+  width: 50px;
+  height: auto;
+  position: absolute;
+  top: 50px;
+  right: 32px;
+}
+.forecast-temp {
+  position: absolute;
+  bottom: 15px;
+  font-size: 1.2em;
+  width: 100%;
+}
+
+.time {
+  position: absolute;
+  width: 30%;
+  bottom: 20px;
+  right: 0;
+  text-align: center;
+}
+.time h4 {
+  color: #AAA;
+}
+.time h5 {
+  color: #AAA;
+}
