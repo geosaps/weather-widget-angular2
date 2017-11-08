@@ -1,10 +1,17 @@
+.container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
 .title {
+  font-family: 'Merriweather', serif;
   text-shadow: .15em .15em .35em #000;
 }
 
 .weather-cont {
-  font-family: 'Libre Baskerville', serif;
-  margin-top: 20px;
+  margin-top: 80px;
   padding: 0;
   height: 500px;
 }
@@ -67,10 +74,10 @@
   -webkit-filter: drop-shadow(5px 5px 5px #111);
     filter: drop-shadow(5px 5px 5px #111);
     width: 40%;
-    margin-top: 40px;
+    margin-top: 20px;
     padding: 0;
     position: absolute;
-    right: 70px;
+    right: 30%;
 }
 .weather-info ul {
   padding-left: 0;
@@ -128,7 +135,7 @@
   height: auto;
   position: absolute;
   top: 50px;
-  right: 32px;
+  right: 30%;
 }
 .forecast-temp {
   position: absolute;
@@ -138,6 +145,7 @@
 }
 
 .time {
+  font-family: 'Merriweather', serif;
   position: absolute;
   width: 30%;
   bottom: 20px;
@@ -149,4 +157,79 @@
 }
 .time h5 {
   color: #AAA;
+}
+
+@media screen and (max-width: 700px) {
+  .title {
+    font-size: 2.4em;
+  }
+  .weather-cont {
+    height: 400px;
+    width: 550px;
+    font-size: 0.8em;
+  }
+  .condition {
+    margin-top: 15px;
+    right: 30%;
+    width: 40%;
+  }
+  .weather-info h2 {
+    margin-top: 90px;
+  }
+  .forecast-condition {
+    width: 40px;
+    top: 40px;
+  }
+  .forecast-temp {
+    bottom: 10px;
+  }
+  .time {
+    bottom: 5px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .title {
+    font-size: 1.8em;
+  }
+  .weather-cont {
+    height: 300px;
+    width: 100%;
+    font-size: 0.7em;
+  }
+  .par-ico {
+    width: 10px;
+  }
+  .condition {
+    margin-top: 15px;
+  }
+  .weather-info h2 {
+    margin-top: 60px;
+  }
+  .hide-small {
+    display: none;
+  }
+  .forecast ul li {
+    padding-top: 10px;
+
+  }
+  .forecast-condition {
+    width: 35px;
+    right: 25%;
+    top: 30px;
+  }
+  .forecast-temp {
+    bottom: 5px;
+    margin-bottom: 0;
+  }
+  .time {
+    bottom: 0;
+  }
+  .time h3 {
+    margin: 0;
+    font-size: 2.2em;
+  }
+  .time h4 {
+    font-size: 1.6em;
+  }
 }

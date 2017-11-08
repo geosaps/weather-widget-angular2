@@ -7,8 +7,8 @@
   </div>
   <div class="container">
   	<div class="row">
-      <div class="col-md-2 col-sm-2"></div>
-      <div class="col-md-8 col-sm-8 weather-cont"> 
+      <div class="col-lg-2 col-md-1 hidden-sm"></div>
+      <div class="col-lg-8 col-md-10 col-sm-12 weather-cont"> 
         <img class="background" [src]="image">
         <h1 class="temperature">{{data.temp_c}} &#x2103;</h1>
         <div class="parameters"> 
@@ -25,7 +25,7 @@
         <div *ngIf='data' class='text-center weather-info'>
           <img class="condition" [src]="icon">
           <h2>{{data.weather}}</h2>
-          <hr>
+          <hr  class='hide-small'>
           <ul> 
             <li><p class="weather-time">{{hourly[0].FCTTIME.hour + ":" + hourly[0].FCTTIME.min}}</p>
                 <p class="weather-temp">{{hourly[0].temp.metric}} &#x2103;</p> 
@@ -63,7 +63,7 @@
             <img class="forecast-condition" [src]="icon4">
             <p class="forecast-temp">{{days[3].high.celsius}} &#x2103;</p>
             </li>
-            <li> 
+            <li class='hide-small'> 
             <p class="forecast-day">{{days[4].date.weekday}}</p>
             <img class="forecast-condition" [src]="icon5">
             <p class="forecast-temp">{{days[4].high.celsius}} &#x2103;</p>
@@ -76,6 +76,6 @@
           <h5>{{data.observation_time_rfc822.slice(5, 16)}}</h5>
         </div>
       </div>
-      <div class="col-md-2 col-sm-2"></div>
+      <div class="col-lg-2 col-md-1 hidden-sm"></div>
   	</div>
   </div>
