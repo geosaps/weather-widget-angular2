@@ -12,29 +12,29 @@ import { WeatherSearchService } from './weather-search.service';
 export class AppComponent implements OnInit {
 
   //setting image variables
-  private image = "";
-  private icon = "assets/ico/nt_clear.png";
-  private icon1;
-  private icon2;
-  private icon3;
-  private icon4;
-  private icon5;
-  private happyPicture = "assets/ico/picture/coffee-cup.svg"
-  private humidityIco = "assets/ico/humidity.svg";
-  private pressureIco = "assets/ico/pressure.svg";
-  private windIco = "assets/ico/wind.svg";
+  public image = "";
+  public icon = "assets/ico/nt_clear.png";
+  public icon1;
+  public icon2;
+  public icon3;
+  public icon4;
+  public icon5;
+  public happyPicture = "assets/ico/picture/coffee-cup.svg"
+  public humidityIco = "assets/ico/humidity.svg";
+  public pressureIco = "assets/ico/pressure.svg";
+  public windIco = "assets/ico/wind.svg";
 
   //setting time variables
-  private date = new Date().getUTCMonth();
-  private season: string;
-  private day = new Date().getHours();
-  private dayPart: string;
-  private happyPhrase: string;
+  public date = new Date().getUTCMonth();
+  public season: string;
+  public day = new Date().getHours();
+  public dayPart: string;
+  public happyPhrase: string;
 
 
   //setting weather variables
-  private condition: string;
-  private dayNight: string;
+  public condition: string;
+  public dayNight: string;
 	data: Object;
   hourly: Object;
   days: Object;
