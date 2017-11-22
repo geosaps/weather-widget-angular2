@@ -35,7 +35,7 @@ export class AppComponent implements OnInit {
   //setting weather variables
   public condition: string;
   public dayNight: string;
-	data: Object;
+	data;
   hourly: Object;
   days: Object;
   apikey: string = '3af5f670f8497198';
