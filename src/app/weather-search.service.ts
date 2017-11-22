@@ -3,7 +3,7 @@ import { Http, Response } from '@angular/http';
 
 
 export const WEATHER_API_KEY = '3af5f670f8497198';
-export const WEATHER_API_URL = 'http://api.wunderground.com/api/';
+export const WEATHER_API_URL = 'https://api.wunderground.com/api/';
 
 @Injectable()
 export class WeatherSearchService {
