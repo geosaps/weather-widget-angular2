@@ -71,7 +71,7 @@ export class AppComponent implements OnInit {
             this.season = "summer";
           } else if (this.date >= 8 && this.date < 11) {
             this.season = "autumn";
-          } else if (this.date === 12 && this.date < 2) {
+          } else if (this.date === 11 && this.date < 2) {
             this.season = "winter";
           }
           this.image = "assets/" + this.season + "/" + this.dayNight + res.json().current_observation.icon + ".jpg";
